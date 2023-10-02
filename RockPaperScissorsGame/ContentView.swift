@@ -7,6 +7,29 @@
 
 import SwiftUI
 
+enum RPSComponent: String {
+    case rock
+    case paper
+    case scissors
+    
+    var winMatch: String {
+        switch self {
+        case .rock: return "paper"
+        case .paper: return "scissors"
+        case .scissors: return "rock"
+        }
+    }
+    
+    var loseMatch: String {
+        switch self {
+        case .rock: return "scissors"
+        case .paper: return "rock"
+        case .scissors: return "paper"
+        }
+    }
+    
+}
+
 struct ContentView: View {
     var body: some View {
         VStack {
